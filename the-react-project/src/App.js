@@ -29,7 +29,7 @@ function App() {
                 <Route path="profile" element={<Profile />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="blog" element={<Blog />} />
-                <Route path="blog:id" element={<BlogDetail />} />
+                <Route path="blog/:id" element={<BlogDetail />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </div>

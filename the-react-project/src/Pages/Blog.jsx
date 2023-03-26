@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
     const [articles, setArticles] = useState([]);
@@ -24,7 +25,11 @@ const Blog = () => {
             {!loading ? (
                 <div>
                     {articles.map(function (article, i) {
-                        return <article key={article.id}>{article.title}</article>;
+                        return (
+                            <article key={article.id}>
+                                <Link to={`./${article.id}`}>{article.title}</Link>
+                            </article>
+                        );
                     })}
                 </div>
             ) : (
